@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
 import { withAuthenticator } from 'aws-amplify-react'
-import Amplify, { Auth } from 'aws-amplify';
-import aws_exports from './aws-exports';
-Amplify.configure(aws_exports);
+import Amplify, { Auth } from 'aws-amplify'
+import aws_exports from './aws-exports'
+
+import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom'
+
+Amplify.configure(aws_exports)
 
 class App extends Component {
   render() {
@@ -20,7 +23,7 @@ class App extends Component {
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
-          >
+          >-dom
             Learn React
           </a>
         </header>
@@ -29,4 +32,4 @@ class App extends Component {
   }
 }
 
-export default withAuthenticator(App, true);
+export default withAuthenticator(App, true)
